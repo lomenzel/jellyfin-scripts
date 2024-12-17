@@ -19,14 +19,14 @@
      {
       devShell = pkgs.mkShell {
         nativeBuildInputs = [
-          pkgs.python3.withPackages (
+          (pkgs.python312.withPackages (
             ps: with ps; [
               pandas
               requests
               python-dotenv
               numpy
             ]
-          )
+          ))
         ];
       };
     }
